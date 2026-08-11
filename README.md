@@ -7,9 +7,9 @@ AI Pass lets applications offer text, image, speech, and multi-model AI while en
 own usage. Apps keep their existing host, authentication, deployment, and billing; AI Pass Spaces
 is optional.
 
-This small repository exists for agent marketplaces that import one entire GitHub repository per
-listing. Its `SKILL.md` is a safety-bounded launcher that always loads the maintained workflow from
-AI Pass, so marketplace installs do not freeze old OAuth or API instructions.
+This small repository exists for agent marketplaces and installers that import one skill from a
+public GitHub repository. The complete reviewed workflow is bundled under
+`aipass-integration/`; it does not download replacement instructions at runtime.
 
 ## Install
 
@@ -17,8 +17,25 @@ AI Pass, so marketplace installs do not freeze old OAuth or API instructions.
 npx skills add aipass-one/aipass-integration-skill
 ```
 
+With the current GitHub CLI Agent Skills commands:
+
+```bash
+gh skill install aipass-one/aipass-integration-skill aipass-integration
+```
+
+The open Agent Skills layout is also discovered natively when copied into a supported project or
+user skill directory, including `.agents/skills/aipass-integration/` for GitHub Copilot, Codex,
+Gemini CLI, OpenCode, and Windsurf. Platform-specific directories are supported too.
+
 The complete multi-skill package and source history live at
 [`aipass-one/skill`](https://github.com/aipass-one/skill).
+
+## Updates
+
+Releases are versioned so agents and reviewers can inspect exactly which workflow they install.
+Update through the installer you used, or compare the next release before upgrading. The public
+AI Pass documentation remains useful reference material, but it never replaces this installed
+skill's instructions at runtime.
 
 ## Security
 
