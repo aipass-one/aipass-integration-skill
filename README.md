@@ -8,10 +8,26 @@ own usage. Apps keep their existing host, authentication, deployment, and billin
 is optional.
 
 This small repository exists for agent marketplaces and installers that import one skill from a
-public GitHub repository. The complete reviewed workflow is bundled under
-`aipass-integration/`; it does not download replacement instructions at runtime.
+public GitHub repository. The complete reviewed workflow is bundled at the repository root as
+`SKILL.md`, `references/`, `assets/`, and `agents/`; it does not download replacement instructions
+at runtime.
 
 ## Install
+
+### Manus
+
+Open **Skills**, select **+ Add → Import from GitHub**, and paste:
+
+```text
+https://github.com/aipass-one/aipass-integration-skill
+```
+
+### Bolt.new
+
+Open the workspace **Skills library** or a project's **Settings → Skills**, select
+**Add skill → From GitHub**, paste the same repository URL, and choose `aipass-integration`.
+
+### Agent Skills installers
 
 ```bash
 npx skills add aipass-one/aipass-integration-skill
